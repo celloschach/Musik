@@ -11,7 +11,7 @@ function startGame(level) {
   currentLevel = level;
   document.getElementById("menu").style.display = "none";
   document.getElementById("game").style.display = "block";
-  nextQuestion();
+  loadQuestion();
 }
 
 function getRandomQuestion(level) {
@@ -20,6 +20,7 @@ function getRandomQuestion(level) {
 
   if (available.length === 0) {
     alert("Alle Fragen wurden benutzt!");
+    backToMenu();
     return null;
   }
 
@@ -30,7 +31,7 @@ function getRandomQuestion(level) {
   return random;
 }
 
-function nextQuestion() {
+function loadQuestion() {
   let q = getRandomQuestion(currentLevel);
   if (!q) return;
 
@@ -60,25 +61,40 @@ function nextQuestion() {
 }
 
 function checkAnswer(index) {
+  let buttons = document.querySelectorAll("#answers button");
+  buttons.forEach(btn => btn.disabled = true);
+
   if (index === currentQuestion.correct) {
     alert("Richtig!");
   } else {
     alert("Falsch! Richtige Antwort: " + currentQuestion.antworten[currentQuestion.correct]);
   }
+
+  backToMenu();
 }
 
 function checkTextAnswer() {
-  let input = document.getElementById("textAnswer").value.toLowerCase();
-  let correct = currentQuestion.answer.toLowerCase();
+  let inputField = document.getElementById("textAnswer");
+  let input = inputField.value.toLowerCase().trim();
+  let correct = currentQuestion.answer.toLowerCase().trim();
+
+  inputField.disabled = true;
 
   if (input === correct) {
     alert("Richtig!");
   } else {
     alert("Falsch! Richtige Antwort: " + currentQuestion.answer);
   }
+
+  backToMenu();
+}
+
+function backToMenu() {
+  document.getElementById("game").style.display = "none";
+  document.getElementById("menu").style.display = "block";
 }
 
 function resetGame() {
   usedQuestions = { "1": [], "2": [], "3": [] };
-  alert("Zurückgesetzt!");
+  alert("Alle Fragen zurückgesetzt!");
 }
