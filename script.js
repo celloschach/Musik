@@ -12,7 +12,7 @@ function normalize(text) {
     .trim()
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[.,;:!?'"“”„()[]{}\-_/\\]/g, " ")
+    .replace(/[.,;:!?'"“”„()[\]{}\-_/\\]/g, " ")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -164,6 +164,18 @@ function loadQuestion() {
     btn.innerText = "Antwort prüfen";
     btn.onclick = checkMultiAnswer;
     answersEl.appendChild(btn);
+  } else if (q.type === "free" || q.type === "manual") {
+    const input = document.createElement("textarea");
+    input.id = "textAnswer";
+    input.rows = 4;
+    input.cols = 40;
+    input.placeholder = "Deine Antwort";
+    answersEl.appendChild(input);
+
+    const btn = document.createElement("button");
+    btn.innerText = q.type === "manual" ? "Lösung anzeigen" : "Antwort speichern";
+    btn.onclick = checkOpenAnswer;
+    answersEl.appendChild(btn);
   } else {
     const input = document.createElement("input");
     input.id = "textAnswer";
@@ -201,6 +213,19 @@ function checkMcAnswer(index) {
   }
 
   returnTimer = setTimeout(backToMenu, 3000);
+}
+
+function checkOpenAnswer() {
+  if (questionLocked) return;
+  questionLocked = true;
+
+  disableAllInputs();
+
+  const resultEl = document.getElementById("result");
+  const model = currentQuestion.modelAnswer ? `\nHinweis: ${currentQuestion.modelAnswer}` : "";
+  resultEl.innerText = `Antwort übernommen.${model}`;
+
+  returnTimer = setTimeout(backToMenu, 3500);
 }
 
 function checkTextAnswer() {
