@@ -10,8 +10,11 @@ function normalize(text) {
   return String(text || "")
     .toLowerCase()
     .trim()
-    .replace(/[.,;:!?'"“”„()\[\]{}]/g, "")
-    .replace(/\s+/g, " ");
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[.,;:!?'"“”„()[]{}\-_/\\]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function splitUserList(value) {
@@ -21,21 +24,82 @@ function splitUserList(value) {
     .filter(Boolean);
 }
 
+function levenshtein(a, b) {
+  a = normalize(a);
+  b = normalize(b);
+
+  const matrix = Array.from({ length: b.length + 1 }, () => []);
+  for (let i = 0; i <= b.length; i++) matrix[i][0] = i;
+  for (let j = 0; j <= a.length; j++) matrix[0][j] = j;
+
+  for (let i = 1; i <= b.length; i++) {
+    for (let j = 1; j <= a.length; j++) {
+      const cost = a[j - 1] === b[i - 1] ? 0 : 1;
+      matrix[i][j] = Math.min(
+        matrix[i - 1][j] + 1,
+        matrix[i][j - 1] + 1,
+        matrix[i - 1][j - 1] + cost
+      );
+    }
+  }
+
+  return matrix[b.length][a.length];
+}
+
+function similarity(a, b) {
+  a = normalize(a);
+  b = normalize(b);
+
+  if (!a && !b) return 1;
+  const longer = Math.max(a.length, b.length);
+  if (longer === 0) return 1;
+
+  const distance = levenshtein(a, b);
+  return (longer - distance) / longer;
+}
+
+function matchesTextAnswer(userInput, correctAnswer, acceptedAnswers = []) {
+  const user = normalize(userInput);
+
+  const candidates = [correctAnswer, ...acceptedAnswers]
+    .filter(Boolean)
+    .map(a => normalize(a));
+
+  for (const candidate of candidates) {
+    if (user === candidate) return true;
+    if (similarity(user, candidate) >= 0.78) return true;
+  }
+
+  return false;
+}
+
+function showStatus(message) {
+  const statusEl = document.getElementById("status");
+  if (!statusEl) return;
+
+  statusEl.innerText = message;
+  clearTimeout(showStatus._timer);
+  showStatus._timer = setTimeout(() => {
+    statusEl.innerText = "";
+  }, 2500);
+}
+
 fetch("questions.json")
   .then(res => res.json())
   .then(data => {
     questions = data;
+    showStatus("Fragen geladen.");
   })
   .catch(err => {
     console.error("Fehler beim Laden von questions.json:", err);
-    document.getElementById("menuText").innerText = "Fragen konnten nicht geladen werden.";
+    showStatus("Fragen konnten nicht geladen werden.");
   });
 
 function startGame(level) {
   currentLevel = String(level);
 
   if (!questions[currentLevel]) {
-    document.getElementById("menuText").innerText = "Fragen werden noch geladen. Bitte kurz warten.";
+    showStatus("Fragen werden noch geladen. Bitte kurz warten.");
     return;
   }
 
@@ -88,22 +152,34 @@ function loadQuestion() {
       btn.onclick = () => checkMcAnswer(i);
       answersEl.appendChild(btn);
     });
+  } else if (q.type === "multi") {
+    const input = document.createElement("textarea");
+    input.id = "textAnswer";
+    input.rows = 4;
+    input.cols = 40;
+    input.placeholder = "Mehrere Antworten mit Komma oder Zeilenumbruch trennen";
+    answersEl.appendChild(input);
+
+    const btn = document.createElement("button");
+    btn.innerText = "Antwort prüfen";
+    btn.onclick = checkMultiAnswer;
+    answersEl.appendChild(btn);
   } else {
     const input = document.createElement("input");
     input.id = "textAnswer";
     input.type = "text";
     input.autocomplete = "off";
-    input.placeholder = q.type === "multi" ? "Mehrere Antworten mit Komma trennen" : "Antwort eingeben";
+    input.placeholder = "Antwort eingeben";
     answersEl.appendChild(input);
 
     const btn = document.createElement("button");
     btn.innerText = "Antwort prüfen";
-    btn.onclick = checkTextLikeAnswer;
+    btn.onclick = checkTextAnswer;
     answersEl.appendChild(btn);
 
     input.addEventListener("keydown", function (e) {
       if (e.key === "Enter") {
-        checkTextLikeAnswer();
+        checkTextAnswer();
       }
     });
   }
@@ -127,7 +203,7 @@ function checkMcAnswer(index) {
   returnTimer = setTimeout(backToMenu, 3000);
 }
 
-function checkTextLikeAnswer() {
+function checkTextAnswer() {
   if (questionLocked) return;
   questionLocked = true;
 
@@ -137,44 +213,47 @@ function checkTextLikeAnswer() {
   const inputEl = document.getElementById("textAnswer");
   const userValue = inputEl ? inputEl.value : "";
 
-  if (currentQuestion.type === "free" || currentQuestion.type === "manual") {
-    const model = currentQuestion.modelAnswer || "Freie Antwort.";
-    resultEl.innerText = "Antwort übernommen. Beispiel: " + model;
-    returnTimer = setTimeout(backToMenu, 3000);
-    return;
-  }
+  const correctAnswer = currentQuestion.answer || "";
+  const accepted = currentQuestion.accepted || [];
 
-  if (currentQuestion.type === "multi") {
-    const userAnswers = splitUserList(userValue);
-    const accepted = (currentQuestion.accepted || []).map(normalize);
-
-    const uniqueAccepted = new Set();
-    for (const item of userAnswers) {
-      if (accepted.includes(item)) {
-        uniqueAccepted.add(item);
-      }
-    }
-
-    if (uniqueAccepted.size >= currentQuestion.minCorrect) {
-      resultEl.innerText = "Richtig!";
-    } else {
-      resultEl.innerText = "Falsch! Beispielantwort: " + currentQuestion.modelAnswer;
-    }
-
-    returnTimer = setTimeout(backToMenu, 3000);
-    return;
-  }
-
-  const user = normalize(userValue);
-  const acceptedAnswers = [
-    currentQuestion.answer,
-    ...(currentQuestion.accepted || [])
-  ].map(normalize);
-
-  if (acceptedAnswers.includes(user)) {
+  if (matchesTextAnswer(userValue, correctAnswer, accepted)) {
     resultEl.innerText = "Richtig!";
   } else {
-    resultEl.innerText = "Falsch! Richtige Antwort: " + currentQuestion.answer;
+    resultEl.innerText = "Falsch! Richtige Antwort: " + correctAnswer;
+  }
+
+  returnTimer = setTimeout(backToMenu, 3000);
+}
+
+function checkMultiAnswer() {
+  if (questionLocked) return;
+  questionLocked = true;
+
+  disableAllInputs();
+
+  const resultEl = document.getElementById("result");
+  const inputEl = document.getElementById("textAnswer");
+  const userAnswers = splitUserList(inputEl ? inputEl.value : "");
+  const accepted = (currentQuestion.accepted || []).map(normalize);
+  const minCorrect = currentQuestion.minCorrect || 1;
+
+  let correctCount = 0;
+  const used = new Set();
+
+  for (const user of userAnswers) {
+    for (const candidate of accepted) {
+      if (!used.has(candidate) && similarity(user, candidate) >= 0.78) {
+        used.add(candidate);
+        correctCount++;
+        break;
+      }
+    }
+  }
+
+  if (correctCount >= minCorrect) {
+    resultEl.innerText = "Richtig!";
+  } else {
+    resultEl.innerText = "Falsch! Beispielantwort: " + currentQuestion.modelAnswer;
   }
 
   returnTimer = setTimeout(backToMenu, 3000);
@@ -202,7 +281,10 @@ function backToMenu() {
 function resetGame() {
   usedQuestions = { "1": [], "2": [], "3": [] };
   questionLocked = false;
+
   clearTimeout(returnTimer);
   returnTimer = null;
+
   backToMenu();
+  showStatus("Reset funktioniert.");
 }
