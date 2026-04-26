@@ -2,26 +2,28 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Musik Quiz</title>
 </head>
 <body>
 
-<h1>Musik Spiel</h1>
+  <h1>Musik Spiel</h1>
 
-<div id="menu">
-  <button onclick="startGame(1)">Level 1</button>
-  <button onclick="startGame(2)">Level 2</button>
-  <button onclick="startGame(3)">Level 3</button>
-</div>
+  <div id="menu">
+    <button onclick="startGame(1)">Level 1</button>
+    <button onclick="startGame(2)">Level 2</button>
+    <button onclick="startGame(3)">Level 3</button>
+  </div>
 
-<div id="game" style="display:none;">
-  <h2 id="question"></h2>
-  <div id="answers"></div>
-</div>
+  <div id="game" style="display:none;">
+    <h2 id="question"></h2>
+    <div id="answers"></div>
+    <p id="result"></p>
+  </div>
 
-<br>
-<button onclick="resetGame()">Reset</button>
+  <br>
+  <button onclick="resetGame()">Reset</button>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
