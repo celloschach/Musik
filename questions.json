@@ -1,1 +1,17 @@
-
+{
+  "1": [
+    {
+      "type": "mc",
+      "frage": "Wer ist der King of Pop?",
+      "antworten": ["Elvis Presley", "Michael Jackson", "Prince", "Drake"],
+      "correct": 1
+    },
+    {
+      "type": "text",
+      "frage": "Welche Band hat 'Bohemian Rhapsody' gemacht?",
+      "answer": "Queen"
+    }
+  ],
+  "2": [],
+  "3": []
+}
