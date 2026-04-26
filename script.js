@@ -1,100 +1,161 @@
 let questions = {};
 let usedQuestions = { "1": [], "2": [], "3": [] };
+
 let currentLevel = null;
 let currentQuestion = null;
+let questionLocked = false;
+let returnTimer = null;
 
-fetch('questions.json')
+fetch("questions.json")
   .then(res => res.json())
-  .then(data => questions = data);
+  .then(data => {
+    questions = data;
+  })
+  .catch(err => {
+    console.error("Fehler beim Laden von questions.json:", err);
+    alert("questions.json konnte nicht geladen werden.");
+  });
 
 function startGame(level) {
-  currentLevel = level;
+  currentLevel = String(level);
+  questionLocked = false;
+
+  clearTimeout(returnTimer);
+  returnTimer = null;
+
   document.getElementById("menu").style.display = "none";
   document.getElementById("game").style.display = "block";
+  document.getElementById("result").innerText = "";
+
   loadQuestion();
 }
 
 function getRandomQuestion(level) {
-  let all = questions[level];
-  let available = all.filter((_, i) => !usedQuestions[level].includes(i));
+  const all = questions[level] || [];
+  const available = all.filter((_, i) => !usedQuestions[level].includes(i));
 
   if (available.length === 0) {
-    alert("Alle Fragen wurden benutzt!");
+    alert("Für dieses Level sind keine Fragen mehr übrig.");
     backToMenu();
     return null;
   }
 
-  let random = available[Math.floor(Math.random() * available.length)];
-  let index = all.indexOf(random);
-  usedQuestions[level].push(index);
+  const randomQuestion = available[Math.floor(Math.random() * available.length)];
+  const originalIndex = all.indexOf(randomQuestion);
+  usedQuestions[level].push(originalIndex);
 
-  return random;
+  return randomQuestion;
 }
 
 function loadQuestion() {
-  let q = getRandomQuestion(currentLevel);
+  const q = getRandomQuestion(currentLevel);
   if (!q) return;
 
   currentQuestion = q;
+  questionLocked = false;
 
   document.getElementById("question").innerText = q.frage;
-  let answersDiv = document.getElementById("answers");
+
+  const answersDiv = document.getElementById("answers");
+  const resultDiv = document.getElementById("result");
   answersDiv.innerHTML = "";
+  resultDiv.innerText = "";
 
   if (q.type === "mc") {
-    q.antworten.forEach((a, i) => {
-      let btn = document.createElement("button");
-      btn.innerText = a;
+    q.antworten.forEach((answer, i) => {
+      const btn = document.createElement("button");
+      btn.innerText = answer;
       btn.onclick = () => checkAnswer(i);
       answersDiv.appendChild(btn);
+      answersDiv.appendChild(document.createElement("br"));
     });
   } else {
-    let input = document.createElement("input");
+    const input = document.createElement("input");
     input.id = "textAnswer";
+    input.type = "text";
+    input.autocomplete = "off";
     answersDiv.appendChild(input);
 
-    let btn = document.createElement("button");
+    answersDiv.appendChild(document.createElement("br"));
+
+    const btn = document.createElement("button");
     btn.innerText = "Antwort prüfen";
     btn.onclick = checkTextAnswer;
     answersDiv.appendChild(btn);
+
+    input.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        checkTextAnswer();
+      }
+    });
   }
 }
 
 function checkAnswer(index) {
-  let buttons = document.querySelectorAll("#answers button");
+  if (questionLocked) return;
+  questionLocked = true;
+
+  const buttons = document.querySelectorAll("#answers button");
   buttons.forEach(btn => btn.disabled = true);
 
+  const resultDiv = document.getElementById("result");
+
   if (index === currentQuestion.correct) {
-    alert("Richtig!");
+    resultDiv.innerText = "Richtig!";
   } else {
-    alert("Falsch! Richtige Antwort: " + currentQuestion.antworten[currentQuestion.correct]);
+    resultDiv.innerText = "Falsch! Richtige Antwort: " + currentQuestion.antworten[currentQuestion.correct];
   }
 
-  backToMenu();
+  returnTimer = setTimeout(() => {
+    backToMenu();
+  }, 3000);
 }
 
 function checkTextAnswer() {
-  let inputField = document.getElementById("textAnswer");
-  let input = inputField.value.toLowerCase().trim();
-  let correct = currentQuestion.answer.toLowerCase().trim();
+  if (questionLocked) return;
+  questionLocked = true;
+
+  const inputField = document.getElementById("textAnswer");
+  const userAnswer = inputField.value.trim().toLowerCase();
+  const correctAnswer = currentQuestion.answer.trim().toLowerCase();
 
   inputField.disabled = true;
 
-  if (input === correct) {
-    alert("Richtig!");
+  const buttons = document.querySelectorAll("#answers button");
+  buttons.forEach(btn => btn.disabled = true);
+
+  const resultDiv = document.getElementById("result");
+
+  if (userAnswer === correctAnswer) {
+    resultDiv.innerText = "Richtig!";
   } else {
-    alert("Falsch! Richtige Antwort: " + currentQuestion.answer);
+    resultDiv.innerText = "Falsch! Richtige Antwort: " + currentQuestion.answer;
   }
 
-  backToMenu();
+  returnTimer = setTimeout(() => {
+    backToMenu();
+  }, 3000);
 }
 
 function backToMenu() {
+  clearTimeout(returnTimer);
+  returnTimer = null;
+
   document.getElementById("game").style.display = "none";
   document.getElementById("menu").style.display = "block";
+
+  document.getElementById("question").innerText = "";
+  document.getElementById("answers").innerHTML = "";
+  document.getElementById("result").innerText = "";
+
+  currentQuestion = null;
+  questionLocked = false;
 }
 
 function resetGame() {
   usedQuestions = { "1": [], "2": [], "3": [] };
-  alert("Alle Fragen zurückgesetzt!");
+  clearTimeout(returnTimer);
+  returnTimer = null;
+  backToMenu();
+  alert("Alle Fragen wurden zurückgesetzt.");
 }
