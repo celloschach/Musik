@@ -12,7 +12,9 @@
       padding: 24px;
       line-height: 1.4;
     }
+
     h1 { margin-bottom: 8px; }
+
     .stack {
       display: inline-block;
       padding: 18px 22px;
@@ -24,7 +26,9 @@
       font-size: 18px;
       min-width: 170px;
     }
+
     .stack:hover { background: #e8e8e8; }
+
     .card {
       border: 2px solid #222;
       border-radius: 16px;
@@ -32,26 +36,32 @@
       margin-top: 18px;
       background: #fff;
     }
+
     button, input {
       font-size: 16px;
       padding: 10px 12px;
       margin: 6px 6px 6px 0;
     }
+
     #answers button {
       display: block;
       width: 100%;
       max-width: 420px;
       text-align: left;
     }
+
     #result {
       font-weight: bold;
       margin-top: 12px;
       min-height: 24px;
     }
-    #menuText {
-      margin-top: 10px;
-      color: #444;
+
+    #status {
+      margin-top: 12px;
+      min-height: 24px;
+      font-weight: bold;
     }
+
     .small {
       font-size: 14px;
       color: #555;
@@ -60,12 +70,14 @@
 </head>
 <body>
   <h1>Musik Spiel</h1>
+
   <div id="menu">
     <div id="menuText">Wähle einen Stapel / ein Level.</div>
     <button class="stack" onclick="startGame(1)">Level 1</button>
     <button class="stack" onclick="startGame(2)">Mittel</button>
     <button class="stack" onclick="startGame(3)">Schwer</button>
     <div class="small">Nach jeder Frage geht es automatisch zurück zur Auswahl.</div>
+    <div id="status"></div>
   </div>
 
   <div id="game" class="card" style="display:none;">
