@@ -3,26 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Musik Quiz</title>
+  <title>Musik Spiel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px;
+      line-height: 1.4;
+    }
+    h1 { margin-bottom: 8px; }
+    .stack {
+      display: inline-block;
+      padding: 18px 22px;
+      margin: 8px;
+      border: 2px solid #222;
+      border-radius: 14px;
+      background: #f2f2f2;
+      cursor: pointer;
+      font-size: 18px;
+      min-width: 170px;
+    }
+    .stack:hover { background: #e8e8e8; }
+    .card {
+      border: 2px solid #222;
+      border-radius: 16px;
+      padding: 20px;
+      margin-top: 18px;
+      background: #fff;
+    }
+    button, input {
+      font-size: 16px;
+      padding: 10px 12px;
+      margin: 6px 6px 6px 0;
+    }
+    #answers button {
+      display: block;
+      width: 100%;
+      max-width: 420px;
+      text-align: left;
+    }
+    #result {
+      font-weight: bold;
+      margin-top: 12px;
+      min-height: 24px;
+    }
+    #menuText {
+      margin-top: 10px;
+      color: #444;
+    }
+    .small {
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
-
   <h1>Musik Spiel</h1>
-
   <div id="menu">
-    <button onclick="startGame(1)">Level 1</button>
-    <button onclick="startGame(2)">Level 2</button>
-    <button onclick="startGame(3)">Level 3</button>
+    <div id="menuText">Wähle einen Stapel / ein Level.</div>
+    <button class="stack" onclick="startGame(1)">Level 1</button>
+    <button class="stack" onclick="startGame(2)">Mittel</button>
+    <button class="stack" onclick="startGame(3)">Schwer</button>
+    <div class="small">Nach jeder Frage geht es automatisch zurück zur Auswahl.</div>
   </div>
 
-  <div id="game" style="display:none;">
+  <div id="game" class="card" style="display:none;">
     <h2 id="question"></h2>
     <div id="answers"></div>
-    <p id="result"></p>
+    <div id="result"></div>
   </div>
 
-  <br>
-  <button onclick="resetGame()">Reset</button>
+  <div style="margin-top:18px;">
+    <button onclick="resetGame()">Reset</button>
+  </div>
 
   <script src="script.js"></script>
 </body>
