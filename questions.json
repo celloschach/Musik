@@ -391,238 +391,194 @@
       "modelAnswer": "Live-Musik / Live-Aufführung"
     }
   ],
-  "2": [
-    {
-      "type": "manual",
-      "frage": "Was macht den Impressionismus aus?",
-      "answer": "Stimmung, Farbe, Klangflächen",
-      "accepted": [
-        "Stimmung",
-        "Farbe",
-        "Klangflächen",
-        "feine Übergänge"
-      ],
-      "keywords": [
-        "stimmung",
-        "farbe",
-        "klang"
-      ],
-      "modelAnswer": "Stimmung, Farbe, Klangflächen, feine Übergänge."
-    },
-    {
-      "type": "manual",
-      "frage": "Wer war der wichtigste Komponist des Impressionismus?",
-      "answer": "Claude Debussy",
-      "accepted": [
-        "Claude Debussy",
-        "Debussy"
-      ],
-      "keywords": [
-        "debussy"
-      ],
-      "modelAnswer": "Claude Debussy"
-    },
-    {
-      "type": "manual",
-      "frage": "Was hat Arnold Schönberg neu erfunden?",
-      "answer": "Zwölftonmusik",
-      "accepted": [
-        "Zwölftonmusik",
-        "12-Ton-Musik",
-        "Zwölftonreihe"
-      ],
-      "keywords": [
-        "zwoelfton",
-        "12"
-      ],
-      "modelAnswer": "Zwölftonmusik"
-    },
-    {
-      "type": "manual",
-      "frage": "Wie entsteht der Ton bei einem Klavier technisch gesehen?",
-      "answer": "Durch Hämmer, die die Saiten anschlagen",
-      "accepted": [
-        "Hämmer schlagen die Saiten an",
-        "durch Hämmer auf Saiten"
-      ],
-      "keywords": [
-        "haemmer",
-        "saiten"
-      ],
-      "modelAnswer": "Durch Hämmer, die die Saiten anschlagen."
-    },
-    {
-      "type": "manual",
-      "frage": "Welche Epoche ist die längste?",
-      "answer": "Mittelalter",
-      "accepted": [
-        "Mittelalter"
-      ],
-      "keywords": [
-        "mittelalter"
-      ],
-      "modelAnswer": "Mittelalter"
-    },
-    {
-      "type": "manual",
-      "frage": "Wer ist bei der letzten Super-Bowl-Halftime-Show aufgetreten?",
-      "answer": "Bad Bunny",
-      "accepted": [
-        "Bad Bunny"
-      ],
-      "keywords": [
-        "bad",
-        "bunny"
-      ],
-      "modelAnswer": "Bad Bunny"
-    },
-    {
-      "type": "manual",
-      "frage": "Welche Funktion hat ein Schlagzeug in einer Band?",
-      "answer": "Rhythmus und Takt vorgeben",
-      "accepted": [
-        "Rhythmus und Takt vorgeben",
-        "den Rhythmus und das Tempo vorgeben"
-      ],
-      "keywords": [
-        "rhythmus",
-        "takt",
-        "tempo"
-      ],
-      "modelAnswer": "Rhythmus und Takt vorgeben."
-    },
-    {
-      "type": "manual",
-      "frage": "Was versteht man unter einem Streichquartett?",
-      "answer": "Vier Streichinstrumente",
-      "accepted": [
-        "Vier Streichinstrumente",
-        "4 Streichinstrumente"
-      ],
-      "keywords": [
-        "vier",
-        "streichinstrumente"
-      ],
-      "modelAnswer": "Vier Streichinstrumente."
-    },
-    {
-      "type": "manual",
-      "frage": "Was muss man bei einem Crescendo tun?",
-      "answer": "Lauter spielen",
-      "accepted": [
-        "lauter spielen"
-      ],
-      "keywords": [
-        "lauter"
-      ],
-      "modelAnswer": "Lauter werden / lauter spielen."
-    },
-    {
-      "type": "manual",
-      "frage": "Was muss man machen, wenn man ein p in den Noten liest?",
-      "answer": "Leise spielen",
-      "accepted": [
-        "leise spielen"
-      ],
-      "keywords": [
-        "leise"
-      ],
-      "modelAnswer": "Leise spielen."
-    },
-    {
-      "type": "manual",
-      "frage": "Wofür steht ein f?",
-      "answer": "forte",
-      "accepted": [
-        "forte"
-      ],
-      "keywords": [
-        "forte"
-      ],
-      "modelAnswer": "forte"
-    },
-    {
-      "type": "manual",
-      "frage": "Was ist Acapella?",
-      "answer": "ohne instrumentale Begleitung",
-      "accepted": [
-        "ohne instrumentale Begleitung",
-        "ohne Instrumentalbegleitung"
-      ],
-      "keywords": [
-        "ohne",
-        "begleitung"
-      ],
-      "modelAnswer": "Ohne instrumentale Begleitung."
-    },
-    {
-      "type": "manual",
-      "frage": "Was ist ein Akkord?",
-      "answer": "Zusammenklang von mindestens drei Tönen",
-      "accepted": [
-        "Zusammenklang von mindestens drei Tönen",
-        "mindestens drei Töne gleichzeitig"
-      ],
-      "keywords": [
-        "zusammenklang",
-        "drei",
-        "toene"
-      ],
-      "modelAnswer": "Zusammenklang von mindestens drei Tönen."
-    },
-    {
-      "type": "manual",
-      "frage": "Was ist Dissonanz?",
-      "answer": "Spannungsreicher Klang",
-      "accepted": [
-        "Spannungsreicher Klang"
-      ],
-      "keywords": [
-        "spannung",
-        "klang"
-      ],
-      "modelAnswer": "Spannungsreicher Klang."
-    },
-    {
-      "type": "manual",
-      "frage": "Was ist das Gegenteil von Dissonanz?",
-      "answer": "Konsonanz",
-      "accepted": [
-        "Konsonanz"
-      ],
-      "keywords": [
-        "konsonanz"
-      ],
-      "modelAnswer": "Konsonanz"
-    },
-    {
-      "type": "manual",
-      "frage": "Was ist eine Oktave?",
-      "answer": "Abstand von acht Tönen",
-      "accepted": [
-        "Abstand von acht Tönen",
-        "acht Töne"
-      ],
-      "keywords": [
-        "acht",
-        "toene"
-      ],
-      "modelAnswer": "Abstand von acht Tönen."
-    },
-    {
-      "type": "manual",
-      "frage": "Was ist, wenn eine Note punktiert ist?",
-      "answer": "Verlängerung der Note um die Hälfte",
-      "accepted": [
-        "die Note wird um die Hälfte verlängert"
-      ],
-      "keywords": [
-        "verlaengerung",
-        "haelfte"
-      ],
-      "modelAnswer": "Die Note wird um die Hälfte verlängert."
-    }
-  ],
+ "2": [
+  {
+    "type": "manual",
+    "frage": "Was macht den Impressionismus aus?",
+    "answer": "Stimmung und Klangfarben",
+    "accepted": ["Stimmung", "Klangfarben", "Farben", "Atmosphäre"]
+  },
+  {
+    "type": "manual",
+    "frage": "Wer war der wichtigste Komponist des Impressionismus?",
+    "answer": "Claude Debussy",
+    "accepted": ["Claude Debussy", "Debussy"]
+  },
+  {
+    "type": "manual",
+    "frage": "Was hat Arnold Schönberg neu erfunden?",
+    "answer": "Zwölftonmusik",
+    "accepted": ["Zwölftonmusik", "12-Ton-Musik"]
+  },
+  {
+    "type": "manual",
+    "frage": "Wie entsteht der Ton bei einem Klavier technisch gesehen?",
+    "answer": "Hämmer schlagen Saiten an",
+    "accepted": ["Hämmer schlagen Saiten", "Hämmer", "Saiten"]
+  },
+  {
+    "type": "manual",
+    "frage": "Welche Epoche ist die längste?",
+    "answer": "Mittelalter",
+    "accepted": ["Mittelalter"]
+  },
+  {
+    "type": "manual",
+    "frage": "Wer ist bei der letzten Superbowl halftime Show aufgetreten?",
+    "answer": "Bad Bunny",
+    "accepted": ["Bad Bunny"]
+  },
+  {
+    "type": "manual",
+    "frage": "Welche Funktion hat ein Schlagzeug in einer Band?",
+    "answer": "Rhythmus und Takt vorgeben",
+    "accepted": ["Rhythmus", "Takt"]
+  },
+  {
+    "type": "manual",
+    "frage": "Was versteht man unter einem Streichquartett?",
+    "answer": "Vier Streichinstrumente",
+    "accepted": ["vier Streichinstrumente", "4 Streichinstrumente"]
+  },
+  {
+    "type": "manual",
+    "frage": "Was muss man bei einem Crescendo tun?",
+    "answer": "Lauter spielen",
+    "accepted": ["lauter"]
+  },
+  {
+    "type": "manual",
+    "frage": "Was muss man machen, wenn man ein p in den Noten liest?",
+    "answer": "Leise spielen",
+    "accepted": ["leise"]
+  },
+  {
+    "type": "manual",
+    "frage": "Wofür steht ein f?",
+    "answer": "forte",
+    "accepted": ["forte"]
+  },
+  {
+    "type": "manual",
+    "frage": "Was ist Acapella?",
+    "answer": "Ohne instrumentale Begleitung",
+    "accepted": ["ohne Begleitung", "ohne Instrumente"]
+  },
+  {
+    "type": "manual",
+    "frage": "Was ist ein Akkord?",
+    "answer": "Zusammenklang von mindestens drei Tönen",
+    "accepted": ["3 Töne", "mehrere Töne"]
+  },
+  {
+    "type": "manual",
+    "frage": "Was ist Dissonanz?",
+    "answer": "Spannungsreicher Klang",
+    "accepted": ["Spannung"]
+  },
+  {
+    "type": "manual",
+    "frage": "Was ist das Gegenteil von Dissonanz?",
+    "answer": "Konsonanz",
+    "accepted": ["Konsonanz"]
+  },
+  {
+    "type": "manual",
+    "frage": "Was ist eine Oktave?",
+    "answer": "Abstand von acht Tönen",
+    "accepted": ["8 Töne"]
+  },
+  {
+    "type": "manual",
+    "frage": "Was ist, wenn eine Note punktiert ist?",
+    "answer": "Verlängerung um die Hälfte",
+    "accepted": ["verlängert"]
+  },
+  {
+    "type": "manual",
+    "frage": "Was bedeutet EDM?",
+    "answer": "Electronic Dance Music",
+    "accepted": ["Electronic Dance Music", "EDM"]
+  },
+  {
+    "type": "manual",
+    "frage": "Was ist ein Sample?",
+    "answer": "Teil eines Songs wird wiederverwendet",
+    "accepted": ["Teil eines Songs", "wiederverwendet"]
+  },
+  {
+    "type": "manual",
+    "frage": "Was ist eine Tournee?",
+    "answer": "Reise mit mehreren Konzerten",
+    "accepted": ["mehrere Konzerte", "Tour"]
+  },
+  {
+    "type": "manual",
+    "frage": "Was ist ein Ghostwriter?",
+    "answer": "Schreibt Texte für andere",
+    "accepted": ["Texte schreiben für andere"]
+  },
+  {
+    "type": "manual",
+    "frage": "Wie viele Linien hat das Notensystem?",
+    "answer": "5",
+    "accepted": ["5", "fünf"]
+  },
+  {
+    "type": "manual",
+    "frage": "Was ist der Unterschied zwischen Remix und Cover?",
+    "answer": "Remix verändert Original, Cover wird neu gespielt",
+    "accepted": ["Remix verändert", "Cover neu gespielt"]
+  },
+  {
+    "type": "manual",
+    "frage": "Was bedeutet ein 3/4-Takt?",
+    "answer": "3 Schläge pro Takt",
+    "accepted": ["3 Schläge"]
+  },
+  {
+    "type": "manual",
+    "frage": "Wie hieß die Band von Freddie Mercury?",
+    "answer": "Queen",
+    "accepted": ["Queen"]
+  },
+  {
+    "type": "manual",
+    "frage": "Wer gilt als der King of Rock'n Roll?",
+    "answer": "Elvis Presley",
+    "accepted": ["Elvis Presley", "Elvis"]
+  },
+  {
+    "type": "manual",
+    "frage": "Wer veröffentlichte das Album Thriller?",
+    "answer": "Michael Jackson",
+    "accepted": ["Michael Jackson"]
+  },
+  {
+    "type": "manual",
+    "frage": "Welcher Komponist schrieb die Zauberflöte?",
+    "answer": "Mozart",
+    "accepted": ["Mozart"]
+  },
+  {
+    "type": "manual",
+    "frage": "Was ist Dynamik in der Musik?",
+    "answer": "Lautstärke und Veränderungen",
+    "accepted": ["Lautstärke"]
+  },
+  {
+    "type": "manual",
+    "frage": "Aus welcher Stadt kamen die Beatles?",
+    "answer": "Liverpool",
+    "accepted": ["Liverpool"]
+  },
+  {
+    "type": "manual",
+    "frage": "Was bedeutet Tempo in der Musik?",
+    "answer": "Geschwindigkeit der Musik",
+    "accepted": ["Geschwindigkeit"]
+  }
+]
   "3": [
     {
       "type": "manual",
