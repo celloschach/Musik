@@ -3,1122 +3,615 @@
     {
       "type": "mc",
       "frage": "Wie nennt man dieses Instrument?",
-      "antworten": [
-        "Geige",
-        "Cello",
-        "Bratsche",
-        "Harfe"
-      ],
+      "antworten": ["Geige", "Cello", "Bratsche", "Harfe"],
       "correct": 0
     },
     {
       "type": "manual",
       "frage": "Wie nennt man Mozart mit vollem Namen?",
       "answer": "Wolfgang Amadeus Mozart",
-      "accepted": [
-        "Wolfgang Amadeus Mozart",
-        "Mozart"
-      ],
-      "modelAnswer": "Wolfgang Amadeus Mozart"
+      "accepted": ["Wolfgang Amadeus Mozart", "Mozart"]
     },
     {
       "type": "mc",
       "frage": "Wie viele Saiten hat meistens eine Gitarre?",
-      "antworten": [
-        "4",
-        "5",
-        "6",
-        "8"
-      ],
+      "antworten": ["4", "5", "6", "8"],
       "correct": 2
     },
     {
       "type": "mc",
       "frage": "Welches ist das berühmteste Stück von Beethoven?",
-      "antworten": [
-        "5. Sinfonie",
-        "Für Elise",
-        "Mondscheinsonate",
-        "Ode an die Freude"
-      ],
-      "correct": 1
-    },
-    {
-      "type": "mc",
-      "frage": "Wie nennt man ein elektrisches Klavier?",
-      "antworten": [
-        "Keyboard",
-        "Pianino",
-        "Cembalo",
-        "Xylophon"
-      ],
+      "antworten": ["Für Elise", "5. Sinfonie", "Ode an die Freude", "Mondscheinsonate"],
       "correct": 0
     },
     {
       "type": "mc",
-      "frage": "Welcher bekannte Komponist wurde in Bonn geboren?",
-      "antworten": [
-        "Mozart",
-        "Beethoven",
-        "Bach",
-        "Haydn"
-      ],
+      "frage": "Wie nennt man ein elektrisches Klavier?",
+      "antworten": ["Keyboard", "Cembalo", "Orgel", "Synthesizer"],
+      "correct": 0
+    },
+    {
+      "type": "mc",
+      "frage": "Welcher Komponist wurde in Bonn geboren?",
+      "antworten": ["Bach", "Beethoven", "Mozart", "Haydn"],
       "correct": 1
     },
     {
       "type": "mc",
       "frage": "Welches ist das größte Streichinstrument?",
-      "antworten": [
-        "Violine",
-        "Bratsche",
-        "Kontrabass",
-        "Cello"
-      ],
-      "correct": 2
+      "antworten": ["Geige", "Bratsche", "Cello", "Kontrabass"],
+      "correct": 3
     },
     {
       "type": "manual",
       "frage": "Welche zwei Arten von Bläsern gibt es?",
       "answer": "Blech- und Holzbläser",
-      "accepted": [
-        "Blechbläser und Holzbläser",
-        "Blech und Holzbläser",
-        "Holz- und Blechbläser"
-      ],
-      "keywords": [
-        "blech",
-        "holz"
-      ],
-      "modelAnswer": "Blechbläser und Holzbläser"
+      "accepted": ["Blechbläser und Holzbläser", "Blech und Holzbläser", "Holz- und Blechbläser"]
     },
     {
       "type": "manual",
-      "frage": "Nenne drei Tasteninstrumente.",
-      "answer": "Orgel, Klavier, Flügel, Cembalo",
-      "accepted": [
-        "Orgel",
-        "Klavier",
-        "Flügel",
-        "Cembalo"
-      ],
-      "keywords": [
-        "orgel",
-        "klavier",
-        "flügel",
-        "cembalo"
-      ],
-      "modelAnswer": "Orgel, Klavier, Flügel, Cembalo (drei reichen)"
+      "frage": "Nenne drei Tasteninstrumente",
+      "accepted": ["Klavier", "Orgel", "Cembalo", "Flügel"]
     },
     {
       "type": "mc",
       "frage": "Welches Instrument kommt aus Nordengland?",
-      "antworten": [
-        "Dudelsack",
-        "Trompete",
-        "Harfe",
-        "Akkordeon"
-      ],
+      "antworten": ["Dudelsack", "Trompete", "Gitarre", "Harfe"],
       "correct": 0
     },
     {
       "type": "mc",
       "frage": "Wer leitet ein Orchester?",
-      "antworten": [
-        "Solist",
-        "Dirigent",
-        "Komponist",
-        "Pianist"
-      ],
-      "correct": 1
-    },
-    {
-      "type": "manual",
-      "frage": "Wie heißt diese Note?",
-      "answer": "C",
-      "accepted": [
-        "C",
-        "c"
-      ],
-      "keywords": [
-        "c"
-      ],
-      "modelAnswer": "C"
-    },
-    {
-      "type": "manual",
-      "frage": "Was macht ein Kreuzchen und ein b?",
-      "answer": "Kreuzchen macht den Ton höher, b macht ihn tiefer",
-      "accepted": [
-        "Kreuzchen macht Ton höher, b tiefer",
-        "Kreuz erhöht den Ton, b erniedrigt den Ton"
-      ],
-      "keywords": [
-        "hoeher",
-        "tiefer"
-      ],
-      "modelAnswer": "Kreuzchen macht den Ton höher, b macht ihn tiefer."
-    },
-    {
-      "type": "mc",
-      "frage": "Welcher ist der bekannteste Notenschlüssel?",
-      "antworten": [
-        "Bassschlüssel",
-        "Violinschlüssel",
-        "Altschlüssel",
-        "Tenorschlüssel"
-      ],
-      "correct": 1
-    },
-    {
-      "type": "mc",
-      "frage": "Häufigstes Instrument in Kirchen?",
-      "antworten": [
-        "Orgel",
-        "Geige",
-        "Trompete",
-        "Gitarre"
-      ],
+      "antworten": ["Dirigent", "Solist", "Komponist", "Lehrer"],
       "correct": 0
     },
     {
-      "type": "mc",
-      "frage": "Bei einem Glockenspiel: desto größer das Plättchen ...?",
-      "antworten": [
-        "desto höher der Ton",
-        "desto tiefer der Ton",
-        "desto leiser der Ton",
-        "desto schneller der Ton"
-      ],
-      "correct": 1
-    },
-    {
-      "type": "mc",
-      "frage": "So kürzer die Saite desto ...?",
-      "antworten": [
-        "tiefer der Ton",
-        "lauter der Ton",
-        "höher der Ton",
-        "schwächer der Ton"
-      ],
-      "correct": 2
-    },
-    {
-      "type": "mc",
+      "type": "manual",
       "frage": "Wie viele Tasten hat ein Klavier?",
-      "antworten": [
-        "61",
-        "76",
-        "88",
-        "100"
-      ],
-      "correct": 2
+      "answer": "88",
+      "accepted": ["88"]
     },
     {
-      "type": "mc",
-      "frage": "Welche zwei Farben haben Klaviertasten?",
-      "antworten": [
-        "rot und blau",
-        "schwarz und weiß",
-        "gelb und schwarz",
-        "braun und weiß"
-      ],
-      "correct": 1
+      "type": "manual",
+      "frage": "Welche Farben haben Klaviertasten?",
+      "answer": "schwarz und weiß",
+      "accepted": ["schwarz und weiß"]
     },
     {
       "type": "manual",
       "frage": "Was ist dein Lieblingsinstrument?",
       "answer": "Freie Antwort.",
-      "accepted": [
-        "Freie Antwort."
-      ],
-      "modelAnswer": "Freie Antwort. Das ist eine Teamfrage."
+      "accepted": ["Freie Antwort."]
     },
     {
       "type": "manual",
-      "frage": "Was ist dein Lieblingssong?",
-      "answer": "Freie Antwort.",
-      "accepted": [
-        "Freie Antwort."
-      ],
-      "modelAnswer": "Freie Antwort. Das ist eine Teamfrage."
+      "frage": "Nenne drei Michael Jackson Songs",
+      "accepted": ["Thriller", "Beat It", "Billie Jean", "Bad", "Smooth Criminal", "Black or White", "Man in the Mirror"]
     },
     {
       "type": "manual",
-      "frage": "Nenne drei Michael Jackson Songs.",
-      "answer": "Thriller, Billie Jean, Beat It",
-      "accepted": [
-        "Thriller",
-        "Billie Jean",
-        "Beat It",
-        "Bad",
-        "Smooth Criminal",
-        "Black or White",
-        "Man in the Mirror"
-      ],
-      "keywords": [
-        "thriller",
-        "billie",
-        "beat",
-        "bad",
-        "smooth"
-      ],
-      "modelAnswer": "Thriller, Billie Jean, Beat It, Bad, Smooth Criminal, Black or White, Man in the Mirror."
+      "frage": "Nenne drei Weihnachtslieder",
+      "accepted": ["Stille Nacht", "O Tannenbaum", "Jingle Bells", "Leise rieselt der Schnee", "O du fröhliche", "Last Christmas"]
     },
     {
       "type": "manual",
-      "frage": "Nenne drei Weihnachtslieder.",
-      "answer": "Stille Nacht, O Tannenbaum, Jingle Bells",
-      "accepted": [
-        "Stille Nacht",
-        "O Tannenbaum",
-        "Jingle Bells",
-        "Leise rieselt der Schnee",
-        "O du fröhliche",
-        "Last Christmas"
-      ],
-      "keywords": [
-        "nacht",
-        "tannenbaum",
-        "bells"
-      ],
-      "modelAnswer": "Stille Nacht, O Tannenbaum, Jingle Bells, Leise rieselt der Schnee, O du fröhliche, Last Christmas."
-    },
-    {
-      "type": "manual",
-      "frage": "Von welcher Musikgruppe ist das Lied Yesterday?",
+      "frage": "Von wem ist Yesterday?",
       "answer": "Beatles",
-      "accepted": [
-        "Beatles",
-        "The Beatles"
-      ],
-      "keywords": [
-        "beatles"
-      ],
-      "modelAnswer": "Beatles"
+      "accepted": ["Beatles", "The Beatles"]
     },
     {
       "type": "manual",
       "frage": "In welchem Land wurde ABBA gegründet?",
       "answer": "Schweden",
-      "accepted": [
-        "Schweden",
-        "Sweden"
-      ],
-      "keywords": [
-        "schweden"
-      ],
-      "modelAnswer": "Schweden"
+      "accepted": ["Schweden"]
     },
     {
       "type": "manual",
-      "frage": "Wie viele Töne haben Dreiklänge mindestens?",
+      "frage": "Wie viele Töne hat ein Dreiklang?",
       "answer": "3",
-      "accepted": [
-        "3",
-        "drei"
-      ],
-      "keywords": [
-        "drei"
-      ],
-      "modelAnswer": "3"
+      "accepted": ["3", "drei"]
     },
     {
       "type": "manual",
-      "frage": "Wie nennt man den untersten Ton eines Dreiklangs?",
+      "frage": "Grundton eines Dreiklangs?",
       "answer": "Grundton",
-      "accepted": [
-        "Grundton"
-      ],
-      "keywords": [
-        "grundton"
-      ],
-      "modelAnswer": "Grundton"
+      "accepted": ["Grundton"]
     },
     {
       "type": "manual",
-      "frage": "Wie nennt man den obersten Ton eines Dreiklangs?",
+      "frage": "Oberster Ton eines Dreiklangs?",
       "answer": "Quintton",
-      "accepted": [
-        "Quintton",
-        "Quinton",
-        "Quinte"
-      ],
-      "keywords": [
-        "quint"
-      ],
-      "modelAnswer": "Quintton / Quinte"
+      "accepted": ["Quintton", "Quinte"]
     },
     {
       "type": "manual",
-      "frage": "Wie heißt das bekannteste Weihnachtslied Deutschlands?",
-      "answer": "Stille Nacht, Heilige Nacht",
-      "accepted": [
-        "Stille Nacht, Heilige Nacht",
-        "Stille Nacht heilige Nacht",
-        "Stille Nacht"
-      ],
-      "keywords": [
-        "stille",
-        "nacht"
-      ],
-      "modelAnswer": "Stille Nacht, Heilige Nacht"
+      "frage": "Bekanntestes deutsches Weihnachtslied?",
+      "answer": "Stille Nacht",
+      "accepted": ["Stille Nacht", "Stille Nacht Heilige Nacht"]
     },
     {
       "type": "manual",
       "frage": "Welches Instrument kann Thaddeus spielen?",
       "answer": "Klarinette",
-      "accepted": [
-        "Klarinette"
-      ],
-      "keywords": [
-        "klarinette"
-      ],
-      "modelAnswer": "Klarinette"
+      "accepted": ["Klarinette"]
     },
     {
       "type": "manual",
       "frage": "Was ist ein Konzert?",
-      "answer": "Live-Musik",
-      "accepted": [
-        "Live-Musik",
-        "Live Musik",
-        "Live-Aufführung"
-      ],
-      "keywords": [
-        "live",
-        "musik"
-      ],
-      "modelAnswer": "Live-Musik / Live-Aufführung"
+      "answer": "Live Musik",
+      "accepted": ["Live Musik", "Live"]
+    },
+    {
+      "type": "manual",
+      "frage": "Wie heißt diese Note?",
+      "answer": "C",
+      "accepted": ["C"]
+    },
+    {
+      "type": "mc",
+      "frage": "Welcher ist der bekannteste Notenschlüssel?",
+      "antworten": ["Bass", "Violin", "Alt", "Tenor"],
+      "correct": 1
+    },
+    {
+      "type": "mc",
+      "frage": "Häufigstes Instrument in Kirchen?",
+      "antworten": ["Orgel", "Gitarre", "Geige", "Trommel"],
+      "correct": 0
+    },
+    {
+      "type": "mc",
+      "frage": "So kürzer die Saite desto ...?",
+      "antworten": ["höher", "tiefer", "gleich", "leiser"],
+      "correct": 0
+    },
+    {
+      "type": "mc",
+      "frage": "Bei einem Glockenspiel: desto größer das Plättchen ...?",
+      "antworten": ["desto tiefer der Ton", "desto höher der Ton", "desto lauter der Ton", "desto leiser der Ton"],
+      "correct": 0
+    },
+    {
+      "type": "manual",
+      "frage": "Kreuz und b Bedeutung",
+      "answer": "höher und tiefer",
+      "accepted": ["höher tiefer", "Ton höher tiefer"]
+    },
+    {
+      "type": "manual",
+      "frage": "Was ist dein Lieblingssong?",
+      "answer": "Freie Antwort.",
+      "accepted": ["Freie Antwort."]
     }
   ],
- "2": [
-  {
-    "type": "manual",
-    "frage": "Was macht den Impressionismus aus?",
-    "answer": "Stimmung und Klangfarben",
-    "accepted": ["Stimmung", "Klangfarben", "Farben", "Atmosphäre"]
-  },
-  {
-    "type": "manual",
-    "frage": "Wer war der wichtigste Komponist des Impressionismus?",
-    "answer": "Claude Debussy",
-    "accepted": ["Claude Debussy", "Debussy"]
-  },
-  {
-    "type": "manual",
-    "frage": "Was hat Arnold Schönberg neu erfunden?",
-    "answer": "Zwölftonmusik",
-    "accepted": ["Zwölftonmusik", "12-Ton-Musik"]
-  },
-  {
-    "type": "manual",
-    "frage": "Wie entsteht der Ton bei einem Klavier technisch gesehen?",
-    "answer": "Hämmer schlagen Saiten an",
-    "accepted": ["Hämmer schlagen Saiten", "Hämmer", "Saiten"]
-  },
-  {
-    "type": "manual",
-    "frage": "Welche Epoche ist die längste?",
-    "answer": "Mittelalter",
-    "accepted": ["Mittelalter"]
-  },
-  {
-    "type": "manual",
-    "frage": "Wer ist bei der letzten Superbowl halftime Show aufgetreten?",
-    "answer": "Bad Bunny",
-    "accepted": ["Bad Bunny"]
-  },
-  {
-    "type": "manual",
-    "frage": "Welche Funktion hat ein Schlagzeug in einer Band?",
-    "answer": "Rhythmus und Takt vorgeben",
-    "accepted": ["Rhythmus", "Takt"]
-  },
-  {
-    "type": "manual",
-    "frage": "Was versteht man unter einem Streichquartett?",
-    "answer": "Vier Streichinstrumente",
-    "accepted": ["vier Streichinstrumente", "4 Streichinstrumente"]
-  },
-  {
-    "type": "manual",
-    "frage": "Was muss man bei einem Crescendo tun?",
-    "answer": "Lauter spielen",
-    "accepted": ["lauter"]
-  },
-  {
-    "type": "manual",
-    "frage": "Was muss man machen, wenn man ein p in den Noten liest?",
-    "answer": "Leise spielen",
-    "accepted": ["leise"]
-  },
-  {
-    "type": "manual",
-    "frage": "Wofür steht ein f?",
-    "answer": "forte",
-    "accepted": ["forte"]
-  },
-  {
-    "type": "manual",
-    "frage": "Was ist Acapella?",
-    "answer": "Ohne instrumentale Begleitung",
-    "accepted": ["ohne Begleitung", "ohne Instrumente"]
-  },
-  {
-    "type": "manual",
-    "frage": "Was ist ein Akkord?",
-    "answer": "Zusammenklang von mindestens drei Tönen",
-    "accepted": ["3 Töne", "mehrere Töne"]
-  },
-  {
-    "type": "manual",
-    "frage": "Was ist Dissonanz?",
-    "answer": "Spannungsreicher Klang",
-    "accepted": ["Spannung"]
-  },
-  {
-    "type": "manual",
-    "frage": "Was ist das Gegenteil von Dissonanz?",
-    "answer": "Konsonanz",
-    "accepted": ["Konsonanz"]
-  },
-  {
-    "type": "manual",
-    "frage": "Was ist eine Oktave?",
-    "answer": "Abstand von acht Tönen",
-    "accepted": ["8 Töne"]
-  },
-  {
-    "type": "manual",
-    "frage": "Was ist, wenn eine Note punktiert ist?",
-    "answer": "Verlängerung um die Hälfte",
-    "accepted": ["verlängert"]
-  },
-  {
-    "type": "manual",
-    "frage": "Was bedeutet EDM?",
-    "answer": "Electronic Dance Music",
-    "accepted": ["Electronic Dance Music", "EDM"]
-  },
-  {
-    "type": "manual",
-    "frage": "Was ist ein Sample?",
-    "answer": "Teil eines Songs wird wiederverwendet",
-    "accepted": ["Teil eines Songs", "wiederverwendet"]
-  },
-  {
-    "type": "manual",
-    "frage": "Was ist eine Tournee?",
-    "answer": "Reise mit mehreren Konzerten",
-    "accepted": ["mehrere Konzerte", "Tour"]
-  },
-  {
-    "type": "manual",
-    "frage": "Was ist ein Ghostwriter?",
-    "answer": "Schreibt Texte für andere",
-    "accepted": ["Texte schreiben für andere"]
-  },
-  {
-    "type": "manual",
-    "frage": "Wie viele Linien hat das Notensystem?",
-    "answer": "5",
-    "accepted": ["5", "fünf"]
-  },
-  {
-    "type": "manual",
-    "frage": "Was ist der Unterschied zwischen Remix und Cover?",
-    "answer": "Remix verändert Original, Cover wird neu gespielt",
-    "accepted": ["Remix verändert", "Cover neu gespielt"]
-  },
-  {
-    "type": "manual",
-    "frage": "Was bedeutet ein 3/4-Takt?",
-    "answer": "3 Schläge pro Takt",
-    "accepted": ["3 Schläge"]
-  },
-  {
-    "type": "manual",
-    "frage": "Wie hieß die Band von Freddie Mercury?",
-    "answer": "Queen",
-    "accepted": ["Queen"]
-  },
-  {
-    "type": "manual",
-    "frage": "Wer gilt als der King of Rock'n Roll?",
-    "answer": "Elvis Presley",
-    "accepted": ["Elvis Presley", "Elvis"]
-  },
-  {
-    "type": "manual",
-    "frage": "Wer veröffentlichte das Album Thriller?",
-    "answer": "Michael Jackson",
-    "accepted": ["Michael Jackson"]
-  },
-  {
-    "type": "manual",
-    "frage": "Welcher Komponist schrieb die Zauberflöte?",
-    "answer": "Mozart",
-    "accepted": ["Mozart"]
-  },
-  {
-    "type": "manual",
-    "frage": "Was ist Dynamik in der Musik?",
-    "answer": "Lautstärke und Veränderungen",
-    "accepted": ["Lautstärke"]
-  },
-  {
-    "type": "manual",
-    "frage": "Aus welcher Stadt kamen die Beatles?",
-    "answer": "Liverpool",
-    "accepted": ["Liverpool"]
-  },
-  {
-    "type": "manual",
-    "frage": "Was bedeutet Tempo in der Musik?",
-    "answer": "Geschwindigkeit der Musik",
-    "accepted": ["Geschwindigkeit"]
-  }
-]
+  "2": [
+    {
+      "type": "manual",
+      "frage": "Was macht den Impressionismus aus?",
+      "answer": "Stimmung und Klangfarben",
+      "accepted": ["Stimmung", "Klangfarben", "Farben", "Atmosphäre"]
+    },
+    {
+      "type": "manual",
+      "frage": "Wer war der wichtigste Komponist des Impressionismus?",
+      "answer": "Claude Debussy",
+      "accepted": ["Claude Debussy", "Debussy"]
+    },
+    {
+      "type": "manual",
+      "frage": "Was hat Arnold Schönberg neu erfunden?",
+      "answer": "Zwölftonmusik",
+      "accepted": ["Zwölftonmusik", "12-Ton-Musik"]
+    },
+    {
+      "type": "manual",
+      "frage": "Wie entsteht der Ton bei einem Klavier technisch gesehen?",
+      "answer": "Hämmer schlagen Saiten an",
+      "accepted": ["Hämmer schlagen Saiten", "Hämmer", "Saiten"]
+    },
+    {
+      "type": "manual",
+      "frage": "Welche Epoche ist die längste?",
+      "answer": "Mittelalter",
+      "accepted": ["Mittelalter"]
+    },
+    {
+      "type": "manual",
+      "frage": "Wer ist bei der letzten Superbowl halftime Show aufgetreten?",
+      "answer": "Bad Bunny",
+      "accepted": ["Bad Bunny"]
+    },
+    {
+      "type": "manual",
+      "frage": "Welche Funktion hat ein Schlagzeug in einer Band?",
+      "answer": "Rhythmus und Takt vorgeben",
+      "accepted": ["Rhythmus", "Takt"]
+    },
+    {
+      "type": "manual",
+      "frage": "Was versteht man unter einem Streichquartett?",
+      "answer": "Vier Streichinstrumente",
+      "accepted": ["vier Streichinstrumente", "4 Streichinstrumente"]
+    },
+    {
+      "type": "manual",
+      "frage": "Was muss man bei einem Crescendo tun?",
+      "answer": "lauter spielen",
+      "accepted": ["lauter"]
+    },
+    {
+      "type": "manual",
+      "frage": "Was muss man machen, wenn man ein p in den Noten liest?",
+      "answer": "leise spielen",
+      "accepted": ["leise"]
+    },
+    {
+      "type": "manual",
+      "frage": "Wofür steht ein f?",
+      "answer": "forte",
+      "accepted": ["forte"]
+    },
+    {
+      "type": "manual",
+      "frage": "Was ist Acapella?",
+      "answer": "ohne instrumentale Begleitung",
+      "accepted": ["ohne Begleitung", "ohne Instrumente"]
+    },
+    {
+      "type": "manual",
+      "frage": "Was ist ein Akkord?",
+      "answer": "Zusammenklang von mindestens drei Tönen",
+      "accepted": ["3 Töne", "mehrere Töne"]
+    },
+    {
+      "type": "manual",
+      "frage": "Was ist Dissonanz?",
+      "answer": "Spannungsreicher Klang",
+      "accepted": ["Spannung"]
+    },
+    {
+      "type": "manual",
+      "frage": "Was ist das Gegenteil von Dissonanz?",
+      "answer": "Konsonanz",
+      "accepted": ["Konsonanz"]
+    },
+    {
+      "type": "manual",
+      "frage": "Was ist eine Oktave?",
+      "answer": "Abstand von acht Tönen",
+      "accepted": ["8 Töne"]
+    },
+    {
+      "type": "manual",
+      "frage": "Was ist, wenn eine Note punktiert ist?",
+      "answer": "Verlängerung um die Hälfte",
+      "accepted": ["verlängert"]
+    },
+    {
+      "type": "manual",
+      "frage": "Was bedeutet EDM?",
+      "answer": "Electronic Dance Music",
+      "accepted": ["Electronic Dance Music", "EDM"]
+    },
+    {
+      "type": "manual",
+      "frage": "Was ist ein Sample?",
+      "answer": "Teil eines Songs wird wiederverwendet",
+      "accepted": ["Teil eines Songs", "wiederverwendet"]
+    },
+    {
+      "type": "manual",
+      "frage": "Was ist eine Tournee?",
+      "answer": "Reise mit mehreren Konzerten",
+      "accepted": ["mehrere Konzerte", "Tour"]
+    },
+    {
+      "type": "manual",
+      "frage": "Was ist ein Ghostwriter?",
+      "answer": "Schreibt Texte für andere",
+      "accepted": ["Texte schreiben für andere"]
+    },
+    {
+      "type": "manual",
+      "frage": "Wie viele Linien hat das Notensystem?",
+      "answer": "5",
+      "accepted": ["5", "fünf"]
+    },
+    {
+      "type": "manual",
+      "frage": "Was ist der Unterschied zwischen Remix und Cover?",
+      "answer": "Remix verändert Original, Cover wird neu gespielt",
+      "accepted": ["Remix verändert", "Cover neu gespielt"]
+    },
+    {
+      "type": "manual",
+      "frage": "Was bedeutet ein 3/4-Takt?",
+      "answer": "Ein Takt hat 3 Schläge",
+      "accepted": ["3 Schläge", "drei Schläge"]
+    },
+    {
+      "type": "manual",
+      "frage": "Wie hieß die Band von Freddie Mercury?",
+      "answer": "Queen",
+      "accepted": ["Queen"]
+    },
+    {
+      "type": "manual",
+      "frage": "Wer gilt als der King of Rock'n Roll?",
+      "answer": "Elvis Presley",
+      "accepted": ["Elvis Presley", "Elvis"]
+    },
+    {
+      "type": "manual",
+      "frage": "Welcher Künstler veröffentlichte das Album Thriller?",
+      "answer": "Michael Jackson",
+      "accepted": ["Michael Jackson"]
+    },
+    {
+      "type": "manual",
+      "frage": "Welcher Komponist schrieb die Zauberflöte?",
+      "answer": "Mozart",
+      "accepted": ["Mozart"]
+    },
+    {
+      "type": "manual",
+      "frage": "Was ist Dynamik in der Musik?",
+      "answer": "Die Lautstärke und ihre Veränderungen",
+      "accepted": ["Lautstärke"]
+    },
+    {
+      "type": "manual",
+      "frage": "Aus welcher Stadt kamen die Beatles?",
+      "answer": "Liverpool",
+      "accepted": ["Liverpool"]
+    },
+    {
+      "type": "manual",
+      "frage": "Was bedeutet Tempo in der Musik?",
+      "answer": "Geschwindigkeit der Musik",
+      "accepted": ["Geschwindigkeit"]
+    }
+  ],
   "3": [
     {
       "type": "manual",
       "frage": "Nenne drei verschiedene Komponisten aus je einer anderen Musikepoche?",
       "answer": "Zum Beispiel Bach, Mozart, Debussy",
-      "accepted": [
-        "Bach",
-        "Mozart",
-        "Debussy",
-        "Vivaldi",
-        "Beethoven",
-        "Schubert",
-        "Schönberg",
-        "Haydn"
-      ],
-      "keywords": [
-        "bach",
-        "mozart",
-        "debussy"
-      ],
-      "modelAnswer": "Bach, Mozart, Debussy."
+      "accepted": ["Bach", "Mozart", "Debussy", "Vivaldi", "Beethoven", "Schubert", "Schönberg", "Haydn"]
     },
     {
       "type": "manual",
       "frage": "Nenne mindestens 2 Mitglieder Namen der Beatles?",
       "answer": "John Lennon und Paul McCartney",
-      "accepted": [
-        "John Lennon",
-        "Paul McCartney",
-        "George Harrison",
-        "Ringo Starr"
-      ],
-      "keywords": [
-        "beatles"
-      ],
-      "modelAnswer": "John Lennon und Paul McCartney. Auch George Harrison und Ringo Starr zählen."
+      "accepted": ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"]
     },
     {
       "type": "manual",
       "frage": "Wie viele Saiten hat ein Cello?",
       "answer": "4",
-      "accepted": [
-        "4",
-        "vier"
-      ],
-      "keywords": [
-        "vier"
-      ],
-      "modelAnswer": "4"
+      "accepted": ["4"]
     },
     {
       "type": "manual",
       "frage": "Wie heißen die vier Saiten eines Cellos?",
       "answer": "A, D, G, C",
-      "accepted": [
-        "A, D, G, C",
-        "A D G C"
-      ],
-      "keywords": [
-        "a",
-        "d",
-        "g",
-        "c"
-      ],
-      "modelAnswer": "A, D, G, C"
+      "accepted": ["A, D, G, C", "A D G C"]
     },
     {
       "type": "manual",
       "frage": "Wie heißen die vier Saiten einer Geige?",
       "answer": "G, D, A, E",
-      "accepted": [
-        "G, D, A, E",
-        "G D A E",
-        "A, D, E, G"
-      ],
-      "keywords": [
-        "g",
-        "d",
-        "a",
-        "e"
-      ],
-      "modelAnswer": "G, D, A, E"
+      "accepted": ["G, D, A, E", "G D A E", "A, D, E, G"]
     },
     {
       "type": "manual",
       "frage": "In welcher Musikepoche wurde das Klavier erfunden?",
       "answer": "1700",
-      "accepted": [
-        "1700",
-        "um 1700"
-      ],
-      "keywords": [
-        "1700"
-      ],
-      "modelAnswer": "Um 1700"
+      "accepted": ["1700"]
     },
     {
       "type": "manual",
       "frage": "Wie viele Pfeifen hat die größte Orgel der Welt?",
       "answer": "33000",
-      "accepted": [
-        "33.000",
-        "33000",
-        "dreiunddreißigtausend"
-      ],
-      "keywords": [
-        "33000"
-      ],
-      "modelAnswer": "33.000"
+      "accepted": ["33000", "33.000", "dreiunddreißigtausend"]
     },
     {
       "type": "manual",
       "frage": "Welche Instrumente/Typen treffen in einem Sinfonieorchester aufeinander?",
       "answer": "Streicher und Bläser",
-      "accepted": [
-        "Streicher und Bläser",
-        "Streicher und Holzbläser und Blechbläser"
-      ],
-      "keywords": [
-        "streicher",
-        "blaeser"
-      ],
-      "modelAnswer": "Streicher und Bläser."
+      "accepted": ["Streicher und Bläser", "Streicher und Holzbläser und Blechbläser"]
     },
     {
       "type": "manual",
       "frage": "Wie heißt das, was bei einem Streichinstrument die Saiten hält?",
       "answer": "Steg",
-      "accepted": [
-        "Steg"
-      ],
-      "keywords": [
-        "steg"
-      ],
-      "modelAnswer": "Steg"
+      "accepted": ["Steg"]
     },
     {
       "type": "manual",
       "frage": "Es gibt 2 Arten, ein Streichinstrument zu stimmen über den ...",
       "answer": "Wirbel und den Feinstimmer",
-      "accepted": [
-        "Wirbel und den Feinstimmer",
-        "über den Wirbel und den Feinstimmer"
-      ],
-      "keywords": [
-        "wirbel",
-        "feinstimmer"
-      ],
-      "modelAnswer": "Über den Wirbel und den Feinstimmer."
+      "accepted": ["Wirbel und den Feinstimmer", "über den Wirbel und den Feinstimmer"]
     },
     {
       "type": "manual",
       "frage": "Bestimme diesen Dreiklang nach Art.",
       "answer": "Ohne Notenbild nicht bestimmbar",
-      "accepted": [
-        "Ohne Notenbild nicht bestimmbar"
-      ],
-      "keywords": [
-        "dreiklang"
-      ],
-      "modelAnswer": "Ohne Notenbild nicht bestimmbar."
+      "accepted": ["Ohne Notenbild nicht bestimmbar"]
     },
     {
       "type": "manual",
       "frage": "Wie heißt ein berühmtes Orchesterstück, das man oft an Weihnachten hört?",
       "answer": "Weihnachtsoratorium",
-      "accepted": [
-        "Weihnachtsoratorium"
-      ],
-      "keywords": [
-        "weihnachtsoratorium"
-      ],
-      "modelAnswer": "Weihnachtsoratorium"
+      "accepted": ["Weihnachtsoratorium"]
     },
     {
       "type": "manual",
       "frage": "Nenne fünf unterschiedliche Notenwerte.",
       "answer": "Ganze, Halbe, Viertel, Achtel, Sechzehntel",
-      "accepted": [
-        "Ganze",
-        "Halbe",
-        "Viertel",
-        "Achtel",
-        "Sechzehntel",
-        "Punktierte Halbe",
-        "Doppelpunktierte Halbe"
-      ],
-      "keywords": [
-        "note"
-      ],
-      "modelAnswer": "Ganze, Halbe, Viertel, Achtel, Sechzehntel."
+      "accepted": ["Ganze", "Halbe", "Viertel", "Achtel", "Sechzehntel", "Punktierte Halbe", "Doppelpunktierte Halbe"]
     },
     {
       "type": "manual",
       "frage": "Welche Musikepoche kam vor Barock?",
       "answer": "Renaissance",
-      "accepted": [
-        "Renaissance"
-      ],
-      "keywords": [
-        "renaissance"
-      ],
-      "modelAnswer": "Renaissance"
+      "accepted": ["Renaissance"]
     },
     {
       "type": "manual",
       "frage": "Wie viele Jahre ist Mozart nach Beginn der Klassik geboren?",
       "answer": "6",
-      "accepted": [
-        "6",
-        "sechs"
-      ],
-      "keywords": [
-        "6"
-      ],
-      "modelAnswer": "6 Jahre"
+      "accepted": ["6", "sechs"]
     },
     {
       "type": "manual",
       "frage": "Welche Band gilt als eine der erfolgreichsten der Musikgeschichte?",
       "answer": "The Beatles",
-      "accepted": [
-        "The Beatles",
-        "Beatles"
-      ],
-      "keywords": [
-        "beatles"
-      ],
-      "modelAnswer": "The Beatles"
+      "accepted": ["The Beatles", "Beatles"]
     },
     {
       "type": "manual",
       "frage": "Der Tod welches Komponisten hat das Ende der Barockzeit eingeleitet?",
       "answer": "Johann Sebastian Bach",
-      "accepted": [
-        "Johann Sebastian Bach",
-        "Bach"
-      ],
-      "keywords": [
-        "bach"
-      ],
-      "modelAnswer": "Johann Sebastian Bach"
+      "accepted": ["Johann Sebastian Bach", "Bach"]
     },
     {
       "type": "manual",
       "frage": "Wer sang den Hit 'Shape of You'?",
       "answer": "Ed Sheeran",
-      "accepted": [
-        "Ed Sheeran",
-        "Sheeran"
-      ],
-      "keywords": [
-        "sheeran"
-      ],
-      "modelAnswer": "Ed Sheeran"
+      "accepted": ["Ed Sheeran", "Sheeran"]
     },
     {
       "type": "manual",
       "frage": "Wie war der Leadsänger von Queen?",
       "answer": "Freddie Mercury",
-      "accepted": [
-        "Freddie Mercury",
-        "Mercury"
-      ],
-      "keywords": [
-        "freddie",
-        "mercury"
-      ],
-      "modelAnswer": "Freddie Mercury"
+      "accepted": ["Freddie Mercury", "Mercury"]
     },
     {
       "type": "manual",
       "frage": "Wie nennt man einen Cellospieler?",
       "answer": "Cellist",
-      "accepted": [
-        "Cellist",
-        "Cellisten",
-        "Cellistin"
-      ],
-      "keywords": [
-        "cellist"
-      ],
-      "modelAnswer": "Cellist"
+      "accepted": ["Cellist", "Cellisten", "Cellistin"]
     },
     {
       "type": "manual",
       "frage": "Wie hießen die Musiker, die früher für Könige gespielt haben?",
       "answer": "Hofmusiker",
-      "accepted": [
-        "Hofmusiker"
-      ],
-      "keywords": [
-        "hofmusiker"
-      ],
-      "modelAnswer": "Hofmusiker"
+      "accepted": ["Hofmusiker"]
     },
     {
       "type": "manual",
       "frage": "Wer gilt als Queen of Pop?",
       "answer": "Madonna",
-      "accepted": [
-        "Madonna"
-      ],
-      "keywords": [
-        "madonna"
-      ],
-      "modelAnswer": "Madonna"
+      "accepted": ["Madonna"]
     },
     {
       "type": "manual",
       "frage": "Welche Band veröffentlichte Smells Like Teen Spirit?",
       "answer": "Nirvana",
-      "accepted": [
-        "Nirvana"
-      ],
-      "keywords": [
-        "nirvana"
-      ],
-      "modelAnswer": "Nirvana"
+      "accepted": ["Nirvana"]
     },
     {
       "type": "manual",
       "frage": "Was ist eine Ganztonleiter?",
       "answer": "besteht nur aus Ganztonschritten",
-      "accepted": [
-        "besteht nur aus Ganztonschritten"
-      ],
-      "keywords": [
-        "ganztonschritte"
-      ],
-      "modelAnswer": "Besteht nur aus Ganztonschritten."
+      "accepted": ["besteht nur aus Ganztonschritten", "nur aus Ganztonschritten"]
     },
     {
       "type": "manual",
       "frage": "Was ist die erste Musikepoche?",
       "answer": "Mittelalter",
-      "accepted": [
-        "Mittelalter"
-      ],
-      "keywords": [
-        "mittelalter"
-      ],
-      "modelAnswer": "Mittelalter"
+      "accepted": ["Mittelalter"]
     },
     {
       "type": "manual",
       "frage": "Was ist das älteste Instrument der Welt?",
       "answer": "Knochenflöte",
-      "accepted": [
-        "Knochenflöte"
-      ],
-      "keywords": [
-        "knochenfloete"
-      ],
-      "modelAnswer": "Knochenflöte"
+      "accepted": ["Knochenflöte"]
     },
     {
       "type": "manual",
       "frage": "Nenne drei Komponisten aus der Barockzeit.",
       "answer": "Johann Sebastian Bach, Antonio Vivaldi, Georg Friedrich Händel",
-      "accepted": [
-        "Johann Sebastian Bach",
-        "Antonio Vivaldi",
-        "Georg Friedrich Händel",
-        "Georg Friedrich Handel"
-      ],
-      "keywords": [
-        "bach",
-        "vivaldi",
-        "haendel"
-      ],
-      "modelAnswer": "Johann Sebastian Bach, Antonio Vivaldi, Georg Friedrich Händel."
+      "accepted": ["Johann Sebastian Bach", "Antonio Vivaldi", "Georg Friedrich Händel", "Georg Friedrich Handel"]
     },
     {
       "type": "manual",
       "frage": "Nach welchem Instrument richten sich die anderen Spieler beim Stimmen in einem Sinfonieorchester?",
       "answer": "Oboe",
-      "accepted": [
-        "Oboe"
-      ],
-      "keywords": [
-        "oboe"
-      ],
-      "modelAnswer": "Oboe"
+      "accepted": ["Oboe"]
     },
     {
       "type": "manual",
       "frage": "Zu welcher Instrumentengruppe gehört die Oboe aufgrund ihrer Klangerzeugung?",
       "answer": "Holzbläser",
-      "accepted": [
-        "Holzbläser"
-      ],
-      "keywords": [
-        "holzblaeser"
-      ],
-      "modelAnswer": "Holzbläser"
+      "accepted": ["Holzbläser"]
     },
     {
       "type": "manual",
       "frage": "Worin unterscheiden sich Violine und Viola hauptsächlich?",
       "answer": "Die Viola ist größer und tiefer",
-      "accepted": [
-        "Die Viola ist größer und tiefer"
-      ],
-      "keywords": [
-        "viola",
-        "groesser",
-        "tiefer"
-      ],
-      "modelAnswer": "Die Viola ist größer und tiefer."
+      "accepted": ["Die Viola ist größer und tiefer"]
     },
     {
       "type": "manual",
       "frage": "Was ist die kürzeste Musikepoche?",
       "answer": "Klassik",
-      "accepted": [
-        "Klassik"
-      ],
-      "keywords": [
-        "klassik"
-      ],
-      "modelAnswer": "Klassik"
+      "accepted": ["Klassik"]
     },
     {
       "type": "manual",
       "frage": "Was ist eine Ouvertüre?",
       "answer": "Eröffnungsstück einer Oper",
-      "accepted": [
-        "Eröffnungsstück einer Oper"
-      ],
-      "keywords": [
-        "eroeffnungsstueck",
-        "oper"
-      ],
-      "modelAnswer": "Eröffnungsstück einer Oper."
+      "accepted": ["Eröffnungsstück einer Oper"]
     },
     {
       "type": "manual",
       "frage": "Was bedeutet Presto?",
-      "answer": "Sehr schnell",
-      "accepted": [
-        "sehr schnell"
-      ],
-      "keywords": [
-        "schnell"
-      ],
-      "modelAnswer": "Sehr schnell."
+      "answer": "sehr schnell",
+      "accepted": ["schnell"]
     },
     {
       "type": "manual",
       "frage": "Was bedeutet Allegro?",
-      "answer": "Schnell, fröhlich",
-      "accepted": [
-        "schnell fröhlich",
-        "schnell und fröhlich"
-      ],
-      "keywords": [
-        "schnell",
-        "froehlich"
-      ],
-      "modelAnswer": "Schnell, fröhlich."
+      "answer": "schnell fröhlich",
+      "accepted": ["schnell"]
     },
     {
       "type": "manual",
       "frage": "Was ist die Steigerung von piano?",
       "answer": "pianissimo",
-      "accepted": [
-        "pianissimo",
-        "pp"
-      ],
-      "keywords": [
-        "pp"
-      ],
-      "modelAnswer": "Pianissimo / pp"
+      "accepted": ["pianissimo", "pp"]
     },
     {
       "type": "manual",
       "frage": "Wie heißt es, wenn man Zupfen soll?",
       "answer": "Pizzicato",
-      "accepted": [
-        "Pizzicato"
-      ],
-      "keywords": [
-        "pizzicato"
-      ],
-      "modelAnswer": "Pizzicato"
+      "accepted": ["Pizzicato"]
     },
     {
       "type": "manual",
       "frage": "Was macht das Auflösungszeichen?",
-      "answer": "Hebt # oder b auf",
-      "accepted": [
-        "Hebt # oder b auf",
-        "Hebt Kreuz oder b auf"
-      ],
-      "keywords": [
-        "aufloesungszeichen",
-        "auf"
-      ],
-      "modelAnswer": "Hebt # oder b auf."
+      "answer": "Hebt Vorzeichen auf",
+      "accepted": ["Hebt # oder b auf", "Hebt Kreuz oder b auf", "Vorzeichen aufheben"]
     },
     {
       "type": "manual",
       "frage": "Wie lautet der vollständige Geburtsname von Michael Jackson?",
       "answer": "Michael Joseph Jackson",
-      "accepted": [
-        "Michael Joseph Jackson"
-      ],
-      "keywords": [
-        "michael",
-        "joseph",
-        "jackson"
-      ],
-      "modelAnswer": "Michael Joseph Jackson"
+      "accepted": ["Michael Joseph Jackson"]
     },
     {
       "type": "manual",
       "frage": "Was ist ein Hook?",
       "answer": "Der Refrain oder der eingängigste Teil",
-      "accepted": [
-        "Refrain",
-        "eingängigster Teil"
-      ],
-      "keywords": [
-        "refrain",
-        "eingaeng"
-      ],
-      "modelAnswer": "Der Refrain / der eingängigste Teil."
+      "accepted": ["Refrain", "eingängigster Teil"]
     },
     {
       "type": "manual",
       "frage": "Wie viele Singles hat Michael Jackson im Lauf seiner Solo-Karriere veröffentlicht?",
       "answer": "79",
-      "accepted": [
-        "79"
-      ],
-      "keywords": [
-        "79"
-      ],
-      "modelAnswer": "79"
+      "accepted": ["79"]
     }
   ]
 }
