@@ -36,7 +36,7 @@ const soundWrong = () => { playTone(220,0.12,"sawtooth",0.04,0.00); playTone(185
 const soundReset = () => { playTone(392,0.08,"sine",0.035,0.00); playTone(330,0.08,"sine",0.035,0.09); playTone(262,0.10,"sine",0.035,0.18); };
 
 function normalize(text) {
-  return String(text || "").toLowerCase().trim().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[.,;:!?'"âââ()[\]{}\-_/\\]/g, " ").replace(/\s+/g, " ").trim();
+  return String(text || "").toLowerCase().trim().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[.,;:!?'"“”„()[\]{}\-_/\\]/g, " ").replace(/\s+/g, " ").trim();
 }
 function tokenize(text) { return normalize(text).split(" ").filter(Boolean); }
 function levenshtein(a,b){
@@ -75,7 +75,7 @@ function updateMenuCounts(){
     const total=(questions[level]||[]).length;
     const used=usedQuestions[level].length;
     const el=document.getElementById(`remaining-${level}`);
-    if(el) el.innerText=`${Math.max(0,total-used)} Fragen Ã¼brig`;
+    if(el) el.innerText=`${Math.max(0,total-used)} Fragen übrig`;
   });
   updateProgressPill();
 }
@@ -84,7 +84,7 @@ function updateProgressPill(){
   if(!pill||currentLevel===null) return;
   const total=(questions[currentLevel]||[]).length;
   const used=usedQuestions[currentLevel].length;
-  pill.innerText=`${Math.max(0,total-used)} Ã¼brig`;
+  pill.innerText=`${Math.max(0,total-used)} übrig`;
 }
 function escapeHtml(text){
   return String(text).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#039;");
@@ -104,7 +104,7 @@ function backToMenu(){
   document.getElementById("result").className="result-box";
   document.getElementById("levelPill").innerText="Level";
   updateMenuCounts();
-  showStatus("ZurÃ¼ck zur Auswahl.");
+  showStatus("Zurück zur Auswahl.");
 }
 function resetGame(){
   ensureAudio(); soundReset();
@@ -130,7 +130,7 @@ function getRandomQuestion(level){
 function renderSolution(question){
   const box=document.getElementById("solution");
   box.classList.remove("hidden");
-  let html=`<p class="solution-head">LÃ¶sung</p>`;
+  let html=`<p class="solution-head">Lösung</p>`;
   const list=[];
   if(question.type==="mc"){
     html += `<p><strong>Richtig:</strong> ${escapeHtml(question.antworten[question.correct])}</p>`;
@@ -138,14 +138,14 @@ function renderSolution(question){
     if(question.answer) list.push(question.answer);
     if(Array.isArray(question.accepted)) list.push(...question.accepted);
     const unique=[...new Set(list.filter(Boolean))];
-    if(question.minCorrect) html += `<p><strong>Mindestens ${question.minCorrect} richtige Antworten nÃ¶tig.</strong></p>`;
+    if(question.minCorrect) html += `<p><strong>Mindestens ${question.minCorrect} richtige Antworten nötig.</strong></p>`;
     html += `<ul class="solution-list">`;
     unique.forEach(item => html += `<li>${escapeHtml(item)}</li>`);
     html += `</ul>`;
     if(question.modelAnswer) html += `<p><strong>Beispiel:</strong> ${escapeHtml(question.modelAnswer)}</p>`;
     if(question.keywords && question.keywords.length) html += `<p><strong>Wichtige Begriffe:</strong> ${escapeHtml(question.keywords.join(", "))}</p>`;
   }
-  html += `<div class="action-row"><button class="back-btn" onclick="backToMenu()">ZurÃ¼ck zum MenÃ¼</button></div>`;
+  html += `<div class="action-row"><button class="back-btn" onclick="backToMenu()">Zurück zum Menü</button></div>`;
   box.innerHTML = html;
   solutionVisible = true;
 }
@@ -156,7 +156,7 @@ function loadQuestion(){
   questionLocked=false;
   solutionVisible=false;
   document.getElementById("question").innerText=q.frage;
-  document.getElementById("questionHint").innerText=q.type==="mc"?"WÃ¤hle eine Antwort.":"LÃ¶sung erst einblenden, dann gemeinsam entscheiden.";
+  document.getElementById("questionHint").innerText=q.type==="mc"?"Wähle eine Antwort.":"Lösung erst einblenden, dann gemeinsam entscheiden.";
   document.getElementById("answers").innerHTML="";
   document.getElementById("solution").innerHTML="";
   document.getElementById("solution").classList.add("hidden");
@@ -172,7 +172,7 @@ function loadQuestion(){
   } else {
     const btn=document.createElement("button");
     btn.className="menu-btn";
-    btn.innerText="LÃ¶sung einblenden";
+    btn.innerText="Lösung einblenden";
     btn.onclick=()=>{ ensureAudio(); soundClick(); if(!solutionVisible) renderSolution(currentQuestion); };
     const row=document.createElement("div");
     row.className="submit-row";
@@ -213,3 +213,4 @@ fetch("questions.json")
   .then(r=>r.json())
   .then(data=>{ questions=data; updateMenuCounts(); showStatus("Fragen geladen."); })
   .catch(()=> showStatus("Fragen konnten nicht geladen werden.", false));
+
