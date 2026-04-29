@@ -12,15 +12,12 @@
       <div>
         <p class="eyebrow">Musik-Quiz</p>
         <h1>Stapel ziehen, Lösung zeigen, gemeinsam entscheiden.</h1>
-        <p class="subline">
-          Multiple-Choice direkt beantworten. Bei offenen Fragen Lösung einblenden und selbst bewerten.
-        </p>
+        <p class="subline">Multiple-Choice direkt beantworten. Bei allen anderen Fragen erst die Lösung einblenden und dann selbst entscheiden.</p>
       </div>
       <div class="hero-badge" id="statusBadge">Bereit</div>
     </header>
 
     <main class="layout">
-      <!-- MENU -->
       <section id="menu" class="panel menu-panel">
         <div class="panel-head">
           <h2>Wähle einen Stapel</h2>
@@ -34,31 +31,28 @@
             <span class="stack-meta">Leichte Musikfragen</span>
             <span class="stack-count" id="remaining-1">0 Fragen übrig</span>
           </button>
-
           <button class="stack-card level-2" onclick="startGame(2)">
             <span class="stack-label">Mittel</span>
             <span class="stack-title">Level 2</span>
             <span class="stack-meta">Theorie und Wissen</span>
             <span class="stack-count" id="remaining-2">0 Fragen übrig</span>
           </button>
-
           <button class="stack-card level-3" onclick="startGame(3)">
             <span class="stack-label">Schwer</span>
             <span class="stack-title">Level 3</span>
-            <span class="stack-meta">Detailfragen</span>
+            <span class="stack-meta">Mehr Detailfragen</span>
             <span class="stack-count" id="remaining-3">0 Fragen übrig</span>
           </button>
         </div>
 
         <div class="menu-footer">
           <button class="reset-button" onclick="resetGame()">Reset</button>
-          <p class="hint">Setzt alle gezogenen Fragen zurück.</p>
+          <p class="hint">Reset setzt alle gezogenen Fragen zurück.</p>
         </div>
 
         <div id="statusText" class="status-text"></div>
       </section>
 
-      <!-- GAME -->
       <section id="game" class="panel game-panel hidden">
         <div class="game-topbar">
           <div class="pill" id="levelPill">Level</div>
@@ -72,7 +66,6 @@
         </div>
 
         <div id="answers" class="answers"></div>
-
         <div id="solution" class="solution-box hidden"></div>
         <div id="result" class="result-box"></div>
       </section>
