@@ -291,7 +291,7 @@ function loadQuestion() {
       answersEl.appendChild(btn);
     });
   } else {
-    hintEl.innerText = "Lösung erst einblenden, dann gemeinsam entscheiden.";
+    hintEl.innerText = "Erst entscheiden, dann Lösung einblenden.";
 
     const btn = document.createElement("button");
     btn.className = "menu-btn";
